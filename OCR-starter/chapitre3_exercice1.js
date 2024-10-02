@@ -15,5 +15,10 @@
 */
 
 // Exemple : si le jour actuel est "mardi", le programme devrait afficher "Demain, nous serons mercredi."
-
+const today = "Mercredi";
+let nextday;
+if (today ==="Mercredi"){
+    nextday = "Jeudi";
+}
+console.log(`Demain, nous serons ${nextday}`)
 // N'oubliez pas de tester votre programme avec divers jours de la semaine.

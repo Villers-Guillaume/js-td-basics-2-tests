@@ -14,10 +14,17 @@
 // 1. Affichez dans la console le résultat de toutes les combinaisons possibles de true ET false
 // 2. Avant de lancer votre navigateur et d'ouvrir la console, notez ici pour chaque ligne le résultat attendu dans un commentaire
 
+
 // Une condition qui utilise l'opérateur logique ET
 
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Testez si le nombre est dans l'intervalle [0, 100]. Autrement dit, testez si 0 <= nombre <= 100. Si c'est le cas, affichez "… est compris entre 0 et 100".
+
+const number1 = prompt("Donne-moi un nombre");
+
+if (number1>=0 && number1<=100){
+    console.log(`${number1} est compris entre 0 et 100`);
+}
 
 // 2°) L'opérateur logique OU
 
@@ -28,7 +35,10 @@
 
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Testez si le nombre est en dehors de l'intervalle [0, 100]. Si c'est le cas, affichez "… est en dehors de l'intervalle [0, 100]".
-
+const number2 = prompt("Donne-moi un nombre");
+if (number2<0 || number2>100){
+    console.log(`${number2} est en dehors de l'intervalle [0 , 100]`);
+}
 // 3°) L'opérateur logique NOT
 
 // Affichez dans la console le résultat NOT true puis le résultat de NOT false
@@ -62,6 +72,19 @@
 // c) Si elle a entre 20 et 30 ans, affichez "… est un jeune homme."
 // d) sinon, affichez "… est un homme."
 
+const firstName = prompt("Quel est ton prénom ?");
+const age = prompt("Quel est ton âge ?");
+
+if (age<13) {
+    console.log(`${firstName} est un petit garçon`)
+} else if (age<20){
+    console.log(`${firstName} est un adolescent`)
+} else if (age<30){
+    console.log(`${firstName} est un jeune homme`)
+} else{
+    console.log(`${firstName} est un homme`)
+}
+
 // Autre application
 
 // 1. Demandez à l'utilisateur d'entrer l'information
@@ -73,3 +96,15 @@
 // c) s'il pleut, affichez "Sortez en blouson."
 // d) s'il neige, affichez "Restez au chaud à la maison."
 // e) dans tous les autres cas (si la personne n'a
+
+const weather = prompt("Quel temps fait-il dehors ? Répondez par un des quatre mots suivants : \nsoleil, vent, pluie ou neige" );
+
+if (weather === "soleil"){
+    console.log("Sortez en t-shirt.");
+} else if (weather === "vent") {
+    console.log("Sortez en pull.")
+} else if (weather === "neige") {
+    console.log("Restez au chaud à la maison.")
+} else  {
+    console.log("Vous n’avez pas entrer un des 4 mots")
+}
