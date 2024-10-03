@@ -13,7 +13,7 @@
 let hour = 12;
 let minutes = 18;
 let second = 40
-const secondNext = second++;
+second++;
 if (second===59){
     second=0;
 }
