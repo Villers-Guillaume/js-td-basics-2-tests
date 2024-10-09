@@ -21,3 +21,14 @@ AUTREMENT DIT :
 
 N'oubliez pas de tester votre programme avec différentes années pour vérifier qu'il fonctionne correctement.
 */
+const year = prompt("Donne-moi une année");
+let isBissextile = false;
+if ((year%4===0 && year%100 !== 0) || year%400===0) {
+    isBissextile = true;
+}
+
+if (isBissextile===true){
+    console.log(`${year} est une année bissextile`);
+} else{
+    console.log(`${year} est une année non bissextile`);
+}

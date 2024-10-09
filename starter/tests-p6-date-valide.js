@@ -27,3 +27,34 @@ N'oubliez pas de tester votre programme avec diverses dates pour vous assurer qu
 
 Vous pouvez utiliser les exemples que vous avez fournis comme point de départ.
 */
+
+//Déclarer et initialiser et recevoir les données day, month, year
+const day = parseInt(prompt("Donne-moi un jour en chiffres"));
+const month = parseInt(prompt("Donne moi un mois en chiffres"));
+const year = parseInt(prompt("Donne-moi une année"));
+let maxDays = 31;
+
+
+//Condition si c'est bissextile
+if (month === 2) {
+    maxDays = 28;
+    if ((year % 4 === 0 && year % 100 === 0) || year % 400 === 0) {
+        maxDays = 29;
+    }
+}
+//condition pour si c'est 30
+else if (month === 1 || month === 4 || month === 6 || month === 9 || month === 11) {
+    maxDays = 30;
+}
+if (day && month && year){
+    if (day > 0 && month>0 && year>0){
+        if (day <=maxDays && month<=12){
+            console.log(`Super, le ${day}/${month}/${year}est une date valide`);
+        } else{
+            console.log(`La date ${day}/${month}/${year} n'est pas une date valide`);
+        }
+    }
+} else {
+    console.log("Entrez un nombre !!!");
+}
+
